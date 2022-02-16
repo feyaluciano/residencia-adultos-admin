@@ -10,7 +10,7 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    alert("authhh");
+    //alert("authhh");
   }
 
 }
