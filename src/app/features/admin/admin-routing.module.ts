@@ -5,26 +5,20 @@ import { AdminComponent } from './admin.component';
 import { AuthComponent } from '../auth/auth.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
-
-const routes:Routes=[   
-  {  
+const routes: Routes = [
+  {
     path: '',
-  component: AdminComponent,
-  children: [ 
-    {path:'*',redirectTo:"auth"},                    
-    { path: 'auth', component: AuthComponent   },
-    { path: 'dashboard', component: DashboardComponent   },
-  ]
-}
-]
-
+    component: AdminComponent,
+    children: [
+      { path: '**', redirectTo: 'auth' },
+      { path: 'auth', component: AuthComponent },
+      { path: 'dashboard', component: DashboardComponent },
+    ],
+  },
+];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    
-    RouterModule.forChild(routes)
-  ],
-  declarations: []
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  declarations: [],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}
