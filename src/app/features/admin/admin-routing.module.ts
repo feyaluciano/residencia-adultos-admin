@@ -6,16 +6,8 @@ import { AuthComponent } from '../auth/auth.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
 
-const routes:Routes=[  
-  //CUANDO INGRESO A misutio.com.ar/ redirige a /auth/login  POR LO TANTO CARGA EL MODULO auth (ver este modulo y su routing)
-  // {
-  //   path: 'auth',
-  //   loadChildren: () => import('../auth/auth.module').then(
-  //     m => m.AuthModule
-  //     ),    
-  // }
-  {
-  
+const routes:Routes=[   
+  {  
     path: '',
   component: AdminComponent,
   children: [ 
