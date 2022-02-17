@@ -4,13 +4,18 @@ import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { DashboardModule } from '../dashboard/dashboard.module';
+import { AuthModule } from '../auth/auth.module';
 
 @NgModule({
   imports: [
-    CommonModule,    
+    CommonModule,
     RouterModule,
     AdminRoutingModule,
+    DashboardModule,
+    AuthModule
   ],
-  declarations: [AdminComponent]
+  declarations: [AdminComponent],
+  exports: []
 })
 export class AdminModule { }

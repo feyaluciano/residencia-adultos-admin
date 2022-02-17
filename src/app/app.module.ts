@@ -4,18 +4,22 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+
 import { AdminModule } from './features/admin/admin.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,       
   ],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    AppRoutingModule,
-    AdminModule
+  imports: [    
+    BrowserModule,       
+    AdminModule,
+    CoreModule,
+    RouterModule,     
+    AppRoutingModule,   
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
