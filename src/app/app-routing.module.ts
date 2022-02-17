@@ -6,12 +6,16 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () =>
-      import('./features/admin/admin.module').then((m) => m.AdminModule),
-    //   path: 'public',
-    // loadChildren: () => import('./features/public/public.module').then(
-    //   m => m.PublicModule
-    //   ),
+      import('./features/admin/admin.module').then((m) => m.AdminModule),   
   },
+
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./features/auth/auth.module').then((m) => m.AuthModule),   
+  },
+
+
 ];
 
 @NgModule({

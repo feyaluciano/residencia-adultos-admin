@@ -14,8 +14,7 @@ import { CoreModule } from 'src/app/core/core.module';
     CoreModule,
     RouterModule,
     AdminRoutingModule,
-    DashboardModule,
-    AuthModule
+    DashboardModule,    
   ],
   declarations: [AdminComponent],
   exports: []

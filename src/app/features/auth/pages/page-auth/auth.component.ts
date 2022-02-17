@@ -7,8 +7,6 @@ import { Router } from '@angular/router';
 })
 export class AuthComponent implements OnInit {
   constructor(private Router: Router) {}
-  login() {
-    this.Router.navigate(['admin/dashboard']);
-  }
+  
   ngOnInit() {}
 }
