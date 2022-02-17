@@ -11,8 +11,8 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: '*', redirectTo: '/admin/auth' },
-      { path: 'auth', component: AuthComponent },
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'auth', component: AuthComponent },      
+      { path: 'dashboard', component: DashboardComponent },      
     ],
   },
 ];

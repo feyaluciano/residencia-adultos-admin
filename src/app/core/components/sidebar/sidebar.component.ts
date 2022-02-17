@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
     },
     {
       texto: 'Usuarios',
-      ruta: '/admin/usuarios',
+      ruta: '/admin/users',
       icono: 'assets/images/icons-menu/users.svg',
       divide: false,
     },
