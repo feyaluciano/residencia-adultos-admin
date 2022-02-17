@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -15,7 +14,7 @@ import { AuthModule } from '../auth/auth.module';
     DashboardModule,
     AuthModule
   ],
-  declarations: [AdminComponent],
+  declarations: [],
   exports: []
 })
 export class AdminModule { }
