@@ -4,9 +4,9 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { DashboardModule } from '../dashboard/dashboard.module';
-import { AuthModule } from '../auth/auth.module';
 import { AdminComponent } from './admin.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { UsersListComponent } from '../users/pages/users-list/users-list.component';
 
 @NgModule({
   imports: [
@@ -14,9 +14,9 @@ import { CoreModule } from 'src/app/core/core.module';
     CoreModule,
     RouterModule,
     AdminRoutingModule,
-    DashboardModule,    
+    DashboardModule,
   ],
-  declarations: [AdminComponent],
-  exports: []
+  declarations: [AdminComponent,UsersListComponent],
+  exports: [  ]
 })
 export class AdminModule { }

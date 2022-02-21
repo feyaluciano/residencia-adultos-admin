@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndPoint:"https://localhost:7038/api/",
+  apiEndPoint:"https://localhost:7038/",
   keyApiGoogle:"keyparadesarrollo-asadasdasdahsd76as8dasdbasd", 
 };
 

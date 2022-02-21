@@ -6,12 +6,11 @@ import { AuthComponent } from '../auth/pages/page-auth/auth.component';
 import { DashboardComponent } from '../dashboard/pages/page-dashboard/dashboard.component';
 import { UsersListComponent } from '../users/pages/users-list/users-list.component';
 
-const routes: Routes = [
+const routes: Routes = [  
   {
-    path: '',
+    path: 'admin',
     component: AdminComponent,
-    children: [
-      { path: '*', redirectTo: '/admin/dashboard' },        
+    children: [          
       { path: 'dashboard', component: DashboardComponent }, 
       { path: 'users', component: UsersListComponent },      
     ],
