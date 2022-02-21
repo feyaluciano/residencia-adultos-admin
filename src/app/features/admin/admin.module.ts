@@ -7,6 +7,7 @@ import { AdminComponent } from './admin.component';
 import { CoreModule } from 'src/app/core/core.module';
 import { UsersListComponent } from '../users/pages/users-list/users-list.component';
 import { UsersModule } from '../users/users.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import { UsersModule } from '../users/users.module';
     RouterModule,
     AdminRoutingModule,
     DashboardModule,
-    UsersModule,
+    UsersModule,    
   ],
   declarations: [AdminComponent],
   exports: [  ]
