@@ -1,5 +1,5 @@
 export interface HTTPResponse<T> {
-    IsSuccess:boolean;
+    isSuccess:boolean;
     Message:string;
     result:any;
     ErrorMessages:string[];

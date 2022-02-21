@@ -3,5 +3,5 @@ export interface User {
     email: string;
     nombre: string;
     apellido: string;
-    activo:boolean;    
+    activo?:boolean;    
 }

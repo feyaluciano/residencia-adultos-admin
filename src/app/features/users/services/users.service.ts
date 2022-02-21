@@ -20,12 +20,12 @@ getUserById(id:string):Observable<HTTPResponse<User>> {
 } 
 
 
-createActivity(url: string,user:User): Observable<HTTPResponse<User>> {
-  return this.adminPrivateService.createEntity(url, user);
+createUser(url: string,user:User): Observable<HTTPResponse<User>> {
+  return this.adminPrivateService.createEntity(url+'api/Usuario/Create', user);
 }
 
-updateActivity(url: string,activity:User): Observable<HTTPResponse<User>> {
-  return this.adminPrivateService.updateEntity(url, activity);
+updateUser(url: string,user:User): Observable<HTTPResponse<User>> {  
+  return this.adminPrivateService.updateEntity(url+'api/Usuario/Update/'+user.idUsuario, user);
 }
 
 

@@ -36,10 +36,10 @@ export class AdminPrivateService {
     return this.httpService.post<T>(url, entity, true);
   }
 
-  updateEntity<T>(params: string, entity: any): Observable<T> {
+  updateEntity<T>(url: string, entity: any): Observable<T> {
     this.setHeaders();
     return this.httpService.put<T>(
-      `${environment.apiEndPoint}${params}`,
+      url,
       entity,
       false
     );
