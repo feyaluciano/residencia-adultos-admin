@@ -1,24 +1,13 @@
-
-          <h1 class="mt-4">Bienvenido</h1>
-          <p>Bienvenido al sistema "Residencia Sueños"</p>
-          <p>
-              Aquí podrá gestionar la información de los residentes del lugar, alimentación, medicinas, tratamientos, médico de cabecera, información de sus familiares,etc.
-              <!-- <code>#</code> -->
-          </p>
-          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center mt-2">
-      <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">Usuarios</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">5<small class="text-muted fw-light"> usuarios</small></h1>            
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Ver</button>
-          </div>
-        </div>
-      </div>
-      
-      
-    </div>
-     
-
+<h1 class="mt-4">Bienvenido</h1>
+<p>Bienvenido al sistema "Residencia Sueños"</p>
+<p>
+  Aquí podrá gestionar la información de los residentes del lugar, alimentación,
+  medicinas, tratamientos, médico de cabecera, información de sus
+  familiares,etc.
+  <!-- <code>#</code> -->
+</p>
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center mt-2">
+  <ng-container *ngFor="let item of postInfo">
+    <app-poster-information [titulo]="item.titulo" [valor]="item.valor" [elemento]="item.elemento" [ruta]="item.ruta"></app-poster-information>
+  </ng-container>
+</div>
