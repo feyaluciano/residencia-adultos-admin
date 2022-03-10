@@ -13,13 +13,15 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./users-form.component.css']
 })
 export class UsersFormComponent implements OnInit {
-  userForm!:FormGroup;
+  
 
   public user!:User;
   editing: boolean=false;
   sending: boolean=false;
   action: string="Nuevo usuario";
-  alertMessage:string="El usario ha sido creado correctamente";  
+  alertMessage:string="El usario ha sido creado correctamente";
+  
+  userForm!:FormGroup;
 
   constructor(private _formBuilder:FormBuilder,private route: ActivatedRoute,private usersService: UsersService,private router: Router) {
     this.userForm=this._formBuilder.group({
@@ -38,7 +40,6 @@ export class UsersFormComponent implements OnInit {
 
   save() {
     if (this.userForm.valid ) {
-     // this.allowSend     = true;
       this.sending = true;      
        this.user = {
         idUsuario:this.user.idUsuario, 
@@ -73,7 +74,6 @@ export class UsersFormComponent implements OnInit {
       this.sending = false;
       this.userForm.markAllAsTouched();
       this.alertMessage = "Por favor complete los campos requeridos";
-      //Swal.fire(this.alertMessage.toString()).then(() => {});
     }
   }
 
@@ -95,15 +95,10 @@ export class UsersFormComponent implements OnInit {
         error: (error) => {
           console.log('Error al obtener el usuario');
         },
-      });
-                  
-    }  else { 
-         
+      });                  
+    }  else {          
       this.editing=false;      
       this.user = { idUsuario: 0,nombre:"",apellido:"",email:"",activo:true };           
     }  
-
-
-
   }
 }

@@ -1,7 +1,9 @@
 <div class="row mt-3">
   <div class="col-md-4">
     <h3>{{action}}</h3>
+    <div *ngIf="sending">Cargando</div>
   </div>
+  
   <div class="col-md-2 text-right offset-md-6">
     <a routerLink="/admin/users"  class="btn btn-secondary" id="sidebarToggle">Volver</a>
   </div>
