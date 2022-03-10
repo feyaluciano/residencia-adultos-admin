@@ -1,6 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-poster-information',
   templateUrl: './poster-information.component.html',
@@ -13,7 +11,15 @@ export class PosterInformationComponent implements OnInit {
   @Input() valor!: string | undefined;
   @Input() elemento!: string | undefined;
 
-  constructor(private router:Router) { }
+
+  @Output() messageEvent = new EventEmitter<string>();
+
+  constructor() { }
+
+
+  sendMessage(poster:string) {    
+    this.messageEvent.emit(poster)
+  }
 
   ngOnInit() {
   }

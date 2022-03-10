@@ -12,23 +12,44 @@ export class DashboardComponent implements OnInit {
       titulo: 'Residentes',
       ruta: '/admin/residentes',
       valor: '20',
-      elemento:' residentes'
+      elemento: ' residentes',
     },
     {
       titulo: 'Usuarios',
       ruta: '/admin/usuarios',
       valor: '10',
-      elemento:' usuarios'
+      elemento: ' usuarios',
     },
     {
       titulo: 'Pagos',
       ruta: '/admin/pagos',
       valor: '5',
-      elemento:' pagos'
+      elemento: ' pagos',
     },
   ];
 
+  residentesViewed: number = 0;
+  usuariosViewed: number = 0;
+  pagosViewed: number = 0;
+
   constructor() {}
+
+  visto!: string;
+
+  receiveMessage($event: string) {
+    this.visto = $event;
+    switch (this.visto) {
+      case 'Residentes':
+        this.residentesViewed++;
+        break;
+      case 'Usuarios':
+        this.usuariosViewed++;
+        break;
+      default:
+        this.pagosViewed++;
+        break;
+    }
+  }
 
   ngOnInit() {}
 

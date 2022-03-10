@@ -7,7 +7,21 @@
   <!-- <code>#</code> -->
 </p>
 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center mt-2">
+
+    <div class="col-md-4">
+        Residentes: {{residentesViewed}}
+    </div>
+    <div class="col-md-4">
+        Usuarios: {{usuariosViewed}}
+    </div>
+    <div class="col-md-4">
+        Pagos: {{pagosViewed}}
+    </div>
+
+</div>
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center mt-2">
   <ng-container *ngFor="let item of postInfo">
-    <app-poster-information [titulo]="item.titulo" [valor]="item.valor" [elemento]="item.elemento" [ruta]="item.ruta"></app-poster-information>
+    <app-poster-information (messageEvent)="receiveMessage($event)" [titulo]="item.titulo" [valor]="item.valor" 
+    [elemento]="item.elemento" [ruta]="item.ruta"></app-poster-information>
   </ng-container>
 </div>
