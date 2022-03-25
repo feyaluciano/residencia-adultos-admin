@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MyAppStateService } from 'src/app/core/services/my-app-state/my-app-state.service';
 @Component({
   selector: 'app-poster-information',
   templateUrl: './poster-information.component.html',
@@ -14,11 +15,12 @@ export class PosterInformationComponent implements OnInit {
 
   @Output() messageEvent = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private _myAppStateService:MyAppStateService) { }
 
 
   sendMessage(poster:string) {    
-    this.messageEvent.emit(poster)
+    this.messageEvent.emit(poster);   
+    this._myAppStateService.viewed$.next(poster);
   }
 
   ngOnInit() {

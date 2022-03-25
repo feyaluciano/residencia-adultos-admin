@@ -1,7 +1,21 @@
   <div class="border-end bg-white" id="sidebar-wrapper">
   <div class="sidebar-heading border-bottom bg-light">Residencia Sueños</div>
+
+  <div class="sidebar-heading border-bottom bg-light"> Se vio: {{posterViewed}}</div>
+
+ 
+
   <div class="list-group list-group-flush">
       <a *ngFor="let item of templateMenu" routerLink="{{item.ruta}}" 
       class="list-group-item list-group-item-action list-group-item-light p-3" >{{item.texto}}</a>      
   </div>
+
+
+  <div class="list-group list-group-flush">
+    <a *ngFor="let item of templateMenu" routerLink="{{item.ruta}}" 
+    class="list-group-item list-group-item-action list-group-item-light p-3" >{{item.texto}}</a>      
 </div>
+
+  
+</div>
+
